@@ -253,9 +253,10 @@ body {
   background: url("./assets/math.png") no-repeat center center;
   background-size: cover;
 }
-.white-box .line {
+.white-box .line,
+.clients .line {
   width: 108px;
-  height: 6px;
+  height: 4px;
   opacity: 1;
   background: var(--font-secondary-color);
 }
@@ -439,3 +440,92 @@ body {
 }
 
 /*********** store end ************/
+/*********** testimonials start ************/
+.testimonials {
+  background: url("./assets/logo-deco-testi.png") no-repeat 90% 10%,
+    var(--font-secondary-color);
+  background-size: auto;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.testimonials .line,
+.store .line {
+  background: var(--font-primary-color);
+  width: 70px;
+  height: 4px;
+  opacity: 1;
+}
+.testimonial-btn {
+  background: #da0a2c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: none;
+  width: 300px;
+  height: 70px;
+  padding: 0 32px;
+  font-style: normal;
+  /* font-weight: bold; */
+  font-size: 18px;
+  line-height: 161%;
+}
+
+.testimonial-card {
+  background: var(--font-primary-color);
+}
+
+.testimonial-card .card-name {
+  font-family: Playfair Display SC;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 98.3%;
+}
+.testimonial-card .card-position {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 161%;
+}
+.testimonial-card .card-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 161%;
+}
+.testimonial-img {
+  margin-bottom: -10%;
+}
+
+/*********** testimonials end ************/
+/*********** clients start ************/
+.clients {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+/*********** clients end ************/
+/*********** footer start ************/
+.footer {
+  height: 100%;
+  width: 100%;
+  background: url("./assets/logo-deco.png") no-repeat,
+    var(--font-secondary-color);
+  background-size: contain;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.footer-nav {
+  list-style-type: none;
+}
+.footer-link {
+  color: var(--font-primary-color);
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 180.5%;
+}
+.footer-link:hover {
+  color: #b90a2c;
+}
+/*********** footer end ************/
