@@ -68,6 +68,41 @@ body {
   opacity: 1;
 }
 /*********** general end ************/
+/*********** about-us start ************/
+.about-us {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.about-us .left-part .sub-title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 104.5%;
+}
+.about-us .left-part {
+  background: url("./assets/about.png") no-repeat;
+  background-size: 350px 605px;
+  background-position: 300px 50%;
+  position: relative;
+}
+.left-part::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  background: #da0a2c;
+  mix-blend-mode: darken;
+}
+.about-us .left-part .section-title {
+  text-shadow: -2px 7px 0px rgba(255, 255, 255, 0.5);
+}
+
+.accordion-item {
+  border: 2px solid white !important;
+}
+/*********** about-us end ************/
 /*********** gv-groups start ************/
 .gv-groups {
   height: 100%;
@@ -254,7 +289,8 @@ body {
   background-size: cover;
 }
 .white-box .line,
-.clients .line {
+.clients .line,
+.about-us .line {
   width: 108px;
   height: 4px;
   opacity: 1;
