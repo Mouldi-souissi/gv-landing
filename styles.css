@@ -68,6 +68,52 @@ body {
   opacity: 1;
 }
 /*********** general end ************/
+/* ************ header start *************** */
+.header {
+  background: #1a191d;
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 889px;
+}
+.header-link {
+  color: var(--font-primary-color);
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 20px;
+  position: relative;
+}
+
+.active {
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #c20a2c;
+  height: 12px;
+  width: 5px;
+}
+.menu-icon {
+  color: var(--font-primary-color);
+  cursor: pointer;
+}
+.hero-text {
+  position: relative;
+  height: 100%;
+}
+
+/* ************ header end *************** */
 /*********** about-us start ************/
 .about-us {
   padding-top: 100px;
@@ -80,27 +126,19 @@ body {
   line-height: 104.5%;
 }
 .about-us .left-part {
-  background: url("./assets/about.png") no-repeat;
-  background-size: 350px 605px;
+  background: url("./assets/about.jpg") no-repeat;
+  background-size: auto 405px;
   background-position: 300px 50%;
   position: relative;
 }
-.left-part::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-  height: 100%;
-  width: 260px;
-  background: #da0a2c;
-  mix-blend-mode: darken;
-}
+
 .about-us .left-part .section-title {
   text-shadow: -2px 7px 0px rgba(255, 255, 255, 0.5);
 }
 
 .accordion-item {
   border: 2px solid white !important;
+  margin-bottom: 20px;
 }
 /*********** about-us end ************/
 /*********** gv-groups start ************/
