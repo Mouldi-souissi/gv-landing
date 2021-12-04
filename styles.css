@@ -127,9 +127,11 @@ body {
 }
 .about-us .left-part {
   background: url("./assets/about.jpg") no-repeat;
-  background-size: auto 405px;
-  background-position: 300px 50%;
+  background-size: 513px 605px;
+  background-position: 250px 50%;
   position: relative;
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 .about-us .left-part .section-title {
@@ -142,187 +144,388 @@ body {
 }
 /*********** about-us end ************/
 /*********** gv-groups start ************/
+@media screen and (max-width: 1220px) {
+  .gv-groups .groups-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(16, 1fr);
+  }
+  .gv-groups .white-box {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    z-index: 1;
+  }
+  .gv-groups .top-left {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  .gv-groups .top-right {
+    grid-column: 1/2;
+    grid-row: 4/6;
+  }
+  .gv-groups .guitar {
+    grid-column: 1/2;
+    grid-row: 6/8;
+  }
+  .gv-groups .painting {
+    grid-column: 1/2;
+    grid-row: 8/10;
+  }
+  .gv-groups .house {
+    grid-column: 1/2;
+    grid-row: 10/12;
+  }
+  .gv-groups .walle {
+    grid-column: 1/2;
+    grid-row: 12/14;
+  }
+  .gv-groups .math {
+    grid-column: 1/2;
+    grid-row: 14/16;
+  }
+
+  .gv-groups .blue-box {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    z-index: 1;
+  }
+  .triangle-blue-box {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(0, -50%) rotate(-90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .brown-box {
+    grid-column: 1/2;
+    grid-row: 5/6;
+    z-index: 1;
+  }
+  .triangle-brown-box {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(155, 128, 59, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .orange-box {
+    grid-column: 1/2;
+    grid-row: 7/8;
+    z-index: 1;
+  }
+  .triangle-orange-box {
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    transform: translate(0, -50%) rotate(90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(241, 88, 34, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .green-box {
+    grid-column: 1/2;
+    grid-row: 9/10;
+    z-index: 1;
+  }
+  .triangle-green-box {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(154, 192, 41, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .light-blue-box {
+    grid-column: 1/2;
+    grid-row: 11/12;
+    z-index: 1;
+  }
+  .triangle-light-blue {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(63, 179, 165, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .dark-blue-box {
+    grid-column: 1/2;
+    grid-row: 13/14;
+    z-index: 1;
+  }
+  .triangle-dark-blue {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(0, -50%) rotate(-90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(0, 43, 194, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .red-box {
+    grid-column: 1/2;
+    grid-row: 15/16;
+    z-index: 1;
+  }
+  .triangle-red-box {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(194, 0, 0, 0.8) transparent;
+    border-style: solid;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .gv-groups .groups-grid {
+    grid-template-columns: 1fr repeat(3, 400px) 1fr;
+    grid-template-rows: repeat(7, 400px);
+  }
+  .gv-groups .white-box {
+    grid-column: 1/3;
+    grid-row: 1/2;
+    z-index: 1;
+  }
+
+  .gv-groups .blue-box {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    z-index: 1;
+  }
+  .triangle-blue-box {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(0, -50%) rotate(-90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .brown-box {
+    grid-column: 4/5;
+    grid-row: 2/3;
+    z-index: 1;
+  }
+  .triangle-brown-box {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(155, 128, 59, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .orange-box {
+    grid-column: 2/3;
+    grid-row: 3/4;
+    z-index: 1;
+  }
+  .triangle-orange-box {
+    position: absolute;
+    top: 50%;
+    right: -45px;
+    transform: translate(0, -50%) rotate(90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(241, 88, 34, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .green-box {
+    grid-column: 2/3;
+    grid-row: 4/5;
+    z-index: 1;
+  }
+  .triangle-green-box {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(154, 192, 41, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .light-blue-box {
+    grid-column: 3/4;
+    grid-row: 5/6;
+    z-index: 1;
+  }
+  .triangle-light-blue {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(63, 179, 165, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .dark-blue-box {
+    grid-column: 3/4;
+    grid-row: 6/7;
+    z-index: 1;
+  }
+  .triangle-dark-blue {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(0, -50%) rotate(-90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(0, 43, 194, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .red-box {
+    grid-column: 4/5;
+    grid-row: 6/7;
+    z-index: 1;
+  }
+  .triangle-red-box {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(194, 0, 0, 0.8) transparent;
+    border-style: solid;
+  }
+  .gv-groups .top-left {
+    grid-column: 1/4;
+    grid-row: 1/4;
+  }
+  .gv-groups .top-right {
+    grid-column: 4/6;
+    grid-row: 1/3;
+  }
+  .gv-groups .guitar {
+    grid-column: 3/5;
+    grid-row: 3/4;
+  }
+  .gv-groups .painting {
+    grid-column: 1/3;
+    grid-row: 4/6;
+  }
+  .gv-groups .house {
+    grid-column: 3/5;
+    grid-row: 4/6;
+  }
+  .gv-groups .walle {
+    grid-column: 1/4;
+    grid-row: 6/8;
+  }
+  .gv-groups .math {
+    grid-column: 4/6;
+    grid-row: 6/8;
+  }
+}
 .gv-groups {
   height: 100%;
   width: 100%;
   background: var(--font-secondary-color);
 }
+.logo-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
 
 .gv-groups .groups-grid {
-  /* height: 3000px; */
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 400px 400px 400px 1fr;
-  grid-template-rows: 400px 400px 400px 400px 400px 400px 400px;
 }
 .gv-groups .white-box {
-  grid-column: 1/3;
-  grid-row: 1/2;
-  z-index: 1;
   background: white;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-.gv-groups .blue-box {
-  grid-column: 3/4;
-  grid-row: 2/3;
-  z-index: 1;
-  background: rgba(28, 181, 224, 0.8);
-}
-.triangle-blue-box {
-  position: absolute;
-  top: 50%;
-  left: -45px;
-  transform: translate(0, -50%) rotate(-90deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
-  border-style: solid;
-}
-.gv-groups .brown-box {
-  grid-column: 4/5;
-  grid-row: 2/3;
-  z-index: 1;
-  background: rgba(155, 128, 59, 0.8);
-}
-.triangle-brown-box {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(155, 128, 59, 0.8) transparent;
-  border-style: solid;
-}
-.gv-groups .orange-box {
-  grid-column: 2/3;
-  grid-row: 3/4;
-  z-index: 1;
-  background: rgba(241, 88, 34, 0.8);
-}
-.triangle-orange-box {
-  position: absolute;
-  top: 50%;
-  right: -45px;
-  transform: translate(0, -50%) rotate(90deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(241, 88, 34, 0.8) transparent;
-  border-style: solid;
-}
-.gv-groups .green-box {
-  grid-column: 2/3;
-  grid-row: 4/5;
-  z-index: 1;
-  background: rgba(154, 192, 41, 0.8);
-}
-.triangle-green-box {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translate(-50%, 0) rotate(180deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(154, 192, 41, 0.8) transparent;
-  border-style: solid;
-}
-.gv-groups .light-blue-box {
-  grid-column: 3/4;
-  grid-row: 5/6;
-  z-index: 1;
-  background: rgba(63, 179, 165, 0.8);
-}
-.triangle-light-blue {
-  position: absolute;
-  top: -30px;
-  left: 50%;
-  transform: translate(-50%, 0);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(63, 179, 165, 0.8) transparent;
-  border-style: solid;
-}
-.gv-groups .dark-blue-box {
-  grid-column: 3/4;
-  grid-row: 6/7;
-  z-index: 1;
-  background: rgba(0, 43, 194, 0.8);
-}
-.triangle-dark-blue {
-  position: absolute;
-  top: 50%;
-  left: -45px;
-  transform: translate(0, -50%) rotate(-90deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(0, 43, 194, 0.8) transparent;
-  border-style: solid;
-}
-.gv-groups .red-box {
-  grid-column: 4/5;
-  grid-row: 6/7;
-  z-index: 1;
-  background: rgba(194, 0, 0, 0.8);
   position: relative;
 }
-.triangle-red-box {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translate(-50%, 0) rotate(180deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(194, 0, 0, 0.8) transparent;
-  border-style: solid;
+
+.gv-groups .blue-box {
+  background: rgba(28, 181, 224, 0.8);
 }
+
+.gv-groups .brown-box {
+  background: rgba(155, 128, 59, 0.8);
+}
+
+.gv-groups .orange-box {
+  background: rgba(241, 88, 34, 0.8);
+}
+
+.gv-groups .green-box {
+  background: rgba(154, 192, 41, 0.8);
+}
+
+.gv-groups .light-blue-box {
+  background: rgba(63, 179, 165, 0.8);
+}
+
+.gv-groups .dark-blue-box {
+  background: rgba(0, 43, 194, 0.8);
+}
+
+.gv-groups .red-box {
+  background: rgba(194, 0, 0, 0.8);
+}
+
 .gv-groups .top-left {
-  grid-column: 1/4;
-  grid-row: 1/4;
   background: url("./assets/library.png") no-repeat center center;
   background-size: cover;
 }
 .gv-groups .top-right {
-  grid-column: 4/6;
-  grid-row: 1/3;
   background: url("./assets/gig.png") no-repeat center center;
   background-size: cover;
 }
 .gv-groups .guitar {
-  grid-column: 3/5;
-  grid-row: 3/4;
   background: url("./assets/guitar.png") no-repeat center center;
   background-size: cover;
 }
 .gv-groups .painting {
-  grid-column: 1/3;
-  grid-row: 4/6;
   background: url("./assets/painting.png") no-repeat center center;
   background-size: cover;
 }
 .gv-groups .house {
-  grid-column: 3/5;
-  grid-row: 4/6;
   background: url("./assets/house.png") no-repeat center center;
   background-size: cover;
 }
 .gv-groups .walle {
-  grid-column: 1/4;
-  grid-row: 6/8;
   background: url("./assets/walle.png") no-repeat center center;
   background-size: cover;
 }
 .gv-groups .math {
-  grid-column: 4/6;
-  grid-row: 6/8;
   background: url("./assets/math.png") no-repeat center center;
   background-size: cover;
 }
@@ -417,6 +620,100 @@ body {
 }
 /*********** contact-us end ************/
 /*********** store start ************/
+@media screen and (max-width: 1220px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, 1fr);
+  }
+  .chip {
+    grid-column: 1/2;
+    grid-row: 2/4;
+  }
+  .gvtronic {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  .headphones {
+    grid-column: 1/2;
+    grid-row: 4/6;
+  }
+  .gvmusic {
+    grid-column: 1/2;
+    grid-row: 5/6;
+  }
+  .triangle1 {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
+    border-style: solid;
+  }
+  .triangle2 {
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
+    border-style: solid;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .grid-wrapper {
+    grid-template-columns: 1fr repeat(3, 400px) 1fr;
+    grid-template-rows: repeat(2, 400px);
+  }
+  .title-box {
+    grid-column: 1/4;
+    grid-row: 1/2;
+  }
+  .headphones {
+    grid-column: 4/6;
+    grid-row: 1/3;
+  }
+  .chip {
+    grid-column: 1/4;
+    grid-row: 2/3;
+  }
+  .gvmusic {
+    grid-column: 4/5;
+    grid-row: 1/2;
+    z-index: 1;
+  }
+  .gvtronic {
+    grid-column: 3/4;
+    grid-row: 2/3;
+    z-index: 1;
+  }
+  .triangle1 {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(180deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
+    border-style: solid;
+  }
+  .triangle2 {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(0, -50%) rotate(-90deg);
+    width: 0;
+    height: 0;
+    border-width: 0 30px 30px 30px;
+    border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
+    border-style: solid;
+  }
+}
 .store {
   height: 100%;
   width: 100%;
@@ -424,44 +721,27 @@ body {
 .grid-wrapper {
   height: 100%;
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: 1fr 1fr;
 }
 .title-box {
-  grid-column: 1/2;
   background: var(--font-secondary-color);
   color: var(--font-primary-color);
   padding: 50px 100px;
 }
 .headphones {
-  grid-column: 2/3;
-  grid-row: 1/3;
   background: url("./assets/headphones.png") no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .chip {
-  grid-column: 1/2;
-  grid-row: 2/3;
   background: url("./assets/chip.png") no-repeat;
   background-position: center center;
   background-size: cover;
 }
 .gvmusic {
-  grid-column: 2/3;
-  grid-row: 1/2;
-  z-index: 1;
   background: rgba(122, 195, 119, 0.8);
-  /* height: 50%;*/
-  width: 80%;
 }
 .gvtronic {
-  grid-column: 1/2;
-  grid-row: 2/3;
-  z-index: 1;
   background: rgba(0, 102, 255, 0.8);
-  width: 40%;
-  justify-self: flex-end;
 }
 
 .store-btn {
@@ -475,28 +755,6 @@ body {
   border: 1px solid var(--font-primary-color);
 }
 
-.triangle1 {
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translate(-50%, 0) rotate(180deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
-  border-style: solid;
-}
-.triangle2 {
-  position: absolute;
-  top: 50%;
-  left: -45px;
-  transform: translate(0, -50%) rotate(-90deg);
-  width: 0;
-  height: 0;
-  border-width: 0 30px 30px 30px;
-  border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
-  border-style: solid;
-}
 .store .items {
   position: relative;
 }
