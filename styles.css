@@ -72,6 +72,7 @@ body {
 .header {
   background: #1a191d;
   width: 100%;
+  position: relative;
 }
 
 .nav {
@@ -110,7 +111,65 @@ body {
 }
 .hero-text {
   position: relative;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 150px;
+  margin-bottom: -50px;
+}
+
+.hero-img {
+  margin-bottom: -70px;
+}
+.sphere {
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.56);
+  mix-blend-mode: overlay;
+  height: 90vmin;
+  width: 90vmin;
+  border-radius: 50%;
+  z-index: 1;
+}
+.hero-inner {
+  position: relative;
+}
+.hero-logo {
+  position: absolute;
+  /* height: 100%;
+  width: 50%; */
+  bottom: 0;
+  right: 0;
+  width: 722px !important;
+  height: 500px !important;
+}
+.btn-hero {
+  margin-top: auto;
+}
+
+.header .social-media {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header .social-media .icon {
+  color: var(--font-primary-color);
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.header .social-media-title {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 98.3%;
+  color: var(--font-primary-color);
+  transform: rotate(-90deg);
+  margin-top: 70px;
 }
 
 /* ************ header end *************** */
@@ -130,7 +189,7 @@ body {
   }
 }
 .about-us {
-  padding-top: 100px;
+  padding-top: 170px;
   padding-bottom: 100px;
   overflow: hidden;
 }
@@ -152,7 +211,6 @@ body {
 .about-us .left-part .section-title {
   text-shadow: -2px 7px 0px rgba(255, 255, 255, 0.5);
 }
-
 .accordion-item {
   border: none !important;
   background: transparent !important;
@@ -210,12 +268,12 @@ body {
   }
   .triangle {
     position: absolute;
-    top: -69px;
+    top: -50px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-style: solid;
   }
   .triangle-blue-box {
@@ -296,12 +354,12 @@ body {
   .triangle-blue-box {
     position: absolute;
     top: 50%;
-    left: -69px;
+    left: -50px;
     transform: rotate(-90deg) translate(-50%, 0);
     transform-origin: top left;
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
     border-style: solid;
   }
@@ -312,12 +370,12 @@ body {
   }
   .triangle-brown-box {
     position: absolute;
-    top: -69px;
+    top: -50px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(155, 128, 59, 0.8) transparent;
     border-style: solid;
   }
@@ -329,12 +387,12 @@ body {
   .triangle-orange-box {
     position: absolute;
     top: 50%;
-    right: -69px;
+    right: -50px;
     transform: rotate(90deg) translate(-50%, 0);
     transform-origin: 50% bottom;
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(241, 88, 34, 0.8) transparent;
     border-style: solid;
   }
@@ -345,12 +403,12 @@ body {
   }
   .triangle-green-box {
     position: absolute;
-    bottom: -69px;
+    bottom: -50px;
     left: 50%;
     transform: translate(-50%, 0) rotate(180deg);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(154, 192, 41, 0.8) transparent;
     border-style: solid;
   }
@@ -361,12 +419,12 @@ body {
   }
   .triangle-light-blue {
     position: absolute;
-    top: -69px;
+    top: -50px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(63, 179, 165, 0.8) transparent;
     border-style: solid;
   }
@@ -378,12 +436,12 @@ body {
   .triangle-dark-blue {
     position: absolute;
     top: 50%;
-    left: -69px;
+    left: -50px;
     transform: rotate(-90deg) translate(-50%, 0);
     transform-origin: top left;
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(0, 43, 194, 0.8) transparent;
     border-style: solid;
   }
@@ -394,12 +452,12 @@ body {
   }
   .triangle-red-box {
     position: absolute;
-    bottom: -69px;
+    bottom: -50px;
     left: 50%;
     transform: translate(-50%, 0) rotate(180deg);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(194, 0, 0, 0.8) transparent;
     border-style: solid;
   }
@@ -620,23 +678,23 @@ body {
   }
   .triangle1 {
     position: absolute;
-    top: -69px;
+    top: -50px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
     border-style: solid;
   }
   .triangle2 {
     position: absolute;
-    top: -69px;
+    top: -50px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
     border-style: solid;
   }
@@ -670,24 +728,24 @@ body {
   }
   .triangle1 {
     position: absolute;
-    bottom: -69px;
+    bottom: -50px;
     left: 50%;
     transform: translate(-50%, 0) rotate(180deg);
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
     border-style: solid;
   }
   .triangle2 {
     position: absolute;
     top: 50%;
-    left: -69px;
+    left: -50px;
     transform: rotate(-90deg) translate(-50%, 0);
     transform-origin: top left;
     width: 0;
     height: 0;
-    border-width: 0 69px 69px 69px;
+    border-width: 0 50px 50px 50px;
     border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
     border-style: solid;
   }
