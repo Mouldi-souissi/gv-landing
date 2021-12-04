@@ -115,9 +115,24 @@ body {
 
 /* ************ header end *************** */
 /*********** about-us start ************/
+@media screen and (max-width: 1220px) {
+  .logo-about {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 1220px) {
+  .logo-about {
+    display: none;
+  }
+}
 .about-us {
   padding-top: 100px;
   padding-bottom: 100px;
+  overflow: hidden;
 }
 .about-us .left-part .sub-title {
   font-style: normal;
@@ -139,20 +154,25 @@ body {
 }
 
 .accordion-item {
-  border: 2px solid white !important;
+  border: none !important;
+  background: transparent !important;
   margin-bottom: 20px;
 }
 /*********** about-us end ************/
 /*********** gv-groups start ************/
 @media screen and (max-width: 1220px) {
+  .logo-box {
+    display: none;
+  }
   .gv-groups .groups-grid {
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(16, 1fr);
+    grid-template-rows: repeat(15, 1fr);
   }
   .gv-groups .white-box {
     grid-column: 1/2;
     grid-row: 1/2;
     z-index: 1;
+    background: rgb(228, 228, 228) !important;
   }
   .gv-groups .top-left {
     grid-column: 1/2;
@@ -188,16 +208,18 @@ body {
     grid-row: 3/4;
     z-index: 1;
   }
-  .triangle-blue-box {
+  .triangle {
     position: absolute;
-    top: 50%;
-    left: -45px;
-    transform: translate(0, -50%) rotate(-90deg);
+    top: -69px;
+    left: 50%;
+    transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
-    border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
+    border-width: 0 69px 69px 69px;
     border-style: solid;
+  }
+  .triangle-blue-box {
+    border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
   }
   .gv-groups .brown-box {
     grid-column: 1/2;
@@ -205,15 +227,7 @@ body {
     z-index: 1;
   }
   .triangle-brown-box {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 0;
-    height: 0;
-    border-width: 0 30px 30px 30px;
     border-color: transparent transparent rgba(155, 128, 59, 0.8) transparent;
-    border-style: solid;
   }
   .gv-groups .orange-box {
     grid-column: 1/2;
@@ -221,15 +235,7 @@ body {
     z-index: 1;
   }
   .triangle-orange-box {
-    position: absolute;
-    top: 50%;
-    right: -45px;
-    transform: translate(0, -50%) rotate(90deg);
-    width: 0;
-    height: 0;
-    border-width: 0 30px 30px 30px;
     border-color: transparent transparent rgba(241, 88, 34, 0.8) transparent;
-    border-style: solid;
   }
   .gv-groups .green-box {
     grid-column: 1/2;
@@ -237,15 +243,7 @@ body {
     z-index: 1;
   }
   .triangle-green-box {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translate(-50%, 0) rotate(180deg);
-    width: 0;
-    height: 0;
-    border-width: 0 30px 30px 30px;
     border-color: transparent transparent rgba(154, 192, 41, 0.8) transparent;
-    border-style: solid;
   }
   .gv-groups .light-blue-box {
     grid-column: 1/2;
@@ -253,15 +251,7 @@ body {
     z-index: 1;
   }
   .triangle-light-blue {
-    position: absolute;
-    top: -30px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    width: 0;
-    height: 0;
-    border-width: 0 30px 30px 30px;
     border-color: transparent transparent rgba(63, 179, 165, 0.8) transparent;
-    border-style: solid;
   }
   .gv-groups .dark-blue-box {
     grid-column: 1/2;
@@ -269,15 +259,7 @@ body {
     z-index: 1;
   }
   .triangle-dark-blue {
-    position: absolute;
-    top: 50%;
-    left: -45px;
-    transform: translate(0, -50%) rotate(-90deg);
-    width: 0;
-    height: 0;
-    border-width: 0 30px 30px 30px;
     border-color: transparent transparent rgba(0, 43, 194, 0.8) transparent;
-    border-style: solid;
   }
   .gv-groups .red-box {
     grid-column: 1/2;
@@ -285,18 +267,17 @@ body {
     z-index: 1;
   }
   .triangle-red-box {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translate(-50%, 0) rotate(180deg);
-    width: 0;
-    height: 0;
-    border-width: 0 30px 30px 30px;
     border-color: transparent transparent rgba(194, 0, 0, 0.8) transparent;
-    border-style: solid;
   }
 }
 @media screen and (min-width: 1220px) {
+  .logo-box {
+    position: absolute;
+    top: 30%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+  }
   .gv-groups .groups-grid {
     grid-template-columns: 1fr repeat(3, 400px) 1fr;
     grid-template-rows: repeat(7, 400px);
@@ -315,11 +296,12 @@ body {
   .triangle-blue-box {
     position: absolute;
     top: 50%;
-    left: -45px;
-    transform: translate(0, -50%) rotate(-90deg);
+    left: -69px;
+    transform: rotate(-90deg) translate(-50%, 0);
+    transform-origin: top left;
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(28, 181, 224, 0.8) transparent;
     border-style: solid;
   }
@@ -330,12 +312,12 @@ body {
   }
   .triangle-brown-box {
     position: absolute;
-    top: -30px;
+    top: -69px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(155, 128, 59, 0.8) transparent;
     border-style: solid;
   }
@@ -347,11 +329,12 @@ body {
   .triangle-orange-box {
     position: absolute;
     top: 50%;
-    right: -45px;
-    transform: translate(0, -50%) rotate(90deg);
+    right: -69px;
+    transform: rotate(90deg) translate(-50%, 0);
+    transform-origin: 50% bottom;
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(241, 88, 34, 0.8) transparent;
     border-style: solid;
   }
@@ -362,12 +345,12 @@ body {
   }
   .triangle-green-box {
     position: absolute;
-    bottom: -30px;
+    bottom: -69px;
     left: 50%;
     transform: translate(-50%, 0) rotate(180deg);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(154, 192, 41, 0.8) transparent;
     border-style: solid;
   }
@@ -378,12 +361,12 @@ body {
   }
   .triangle-light-blue {
     position: absolute;
-    top: -30px;
+    top: -69px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(63, 179, 165, 0.8) transparent;
     border-style: solid;
   }
@@ -395,11 +378,12 @@ body {
   .triangle-dark-blue {
     position: absolute;
     top: 50%;
-    left: -45px;
-    transform: translate(0, -50%) rotate(-90deg);
+    left: -69px;
+    transform: rotate(-90deg) translate(-50%, 0);
+    transform-origin: top left;
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(0, 43, 194, 0.8) transparent;
     border-style: solid;
   }
@@ -410,12 +394,12 @@ body {
   }
   .triangle-red-box {
     position: absolute;
-    bottom: -30px;
+    bottom: -69px;
     left: 50%;
     transform: translate(-50%, 0) rotate(180deg);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(194, 0, 0, 0.8) transparent;
     border-style: solid;
   }
@@ -452,13 +436,6 @@ body {
   height: 100%;
   width: 100%;
   background: var(--font-secondary-color);
-}
-.logo-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
 }
 
 .gv-groups .groups-grid {
@@ -643,23 +620,23 @@ body {
   }
   .triangle1 {
     position: absolute;
-    top: -30px;
+    top: -69px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
     border-style: solid;
   }
   .triangle2 {
     position: absolute;
-    top: -30px;
+    top: -69px;
     left: 50%;
     transform: translate(-50%, 0);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
     border-style: solid;
   }
@@ -693,23 +670,24 @@ body {
   }
   .triangle1 {
     position: absolute;
-    bottom: -30px;
+    bottom: -69px;
     left: 50%;
     transform: translate(-50%, 0) rotate(180deg);
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(122, 195, 119, 0.8) transparent;
     border-style: solid;
   }
   .triangle2 {
     position: absolute;
     top: 50%;
-    left: -45px;
-    transform: translate(0, -50%) rotate(-90deg);
+    left: -69px;
+    transform: rotate(-90deg) translate(-50%, 0);
+    transform-origin: top left;
     width: 0;
     height: 0;
-    border-width: 0 30px 30px 30px;
+    border-width: 0 69px 69px 69px;
     border-color: transparent transparent rgba(0, 102, 255, 0.8) transparent;
     border-style: solid;
   }
