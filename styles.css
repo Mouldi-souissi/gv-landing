@@ -13,15 +13,25 @@ body {
 :root {
   --font-primary-color: #ffffff;
   --font-secondary-color: #1a191d;
-  font-size: 24px;
+  /* font-size: 24px; */
 }
 
 /*********** general start ************/
+@media (min-width: 576px) {
+  .section-title {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
 .section-title {
   font-family: Playfair Display SC;
   font-style: normal;
   font-weight: 900;
-  font-size: 40px;
+
   line-height: 98.3%;
 }
 .light-btn {
@@ -616,15 +626,14 @@ body {
 .left .left-welcome {
   font-style: normal;
   font-weight: bold;
-  font-size: 96px;
-  line-height: 112px;
+  font-size: 3rem;
+
   color: #b90a2c;
 }
 .left .left-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 48px;
-  line-height: 56px;
+  font-size: 1.5rem;
   color: #292929;
 }
 .left .left-sub-title {
@@ -641,22 +650,21 @@ body {
   width: 82px;
 }
 .contact-us .right {
-  background: rgba(248, 248, 248, 0.54);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 78px 30px;
+  /* padding: 78px 30px; */
 }
 .right .form {
   display: flex;
   flex-direction: column;
+  background: rgba(248, 248, 248, 0.54);
+  width: 100%;
 }
 .right .form-title {
   font-style: normal;
   font-weight: bold;
-  font-size: 40px;
-  line-height: 47px;
-  /* text-align: right; */
+  font-size: 2rem;
   color: #3a3a3c;
 }
 .right .input {
@@ -665,7 +673,7 @@ body {
   border-radius: 32px !important;
   border: none;
   padding: 10px 20px;
-  width: 350px;
+  width: 80%;
 }
 .right .link {
   color: #b90a2c;
@@ -790,7 +798,6 @@ body {
 .title-box {
   background: var(--font-secondary-color);
   color: var(--font-primary-color);
-  padding: 50px 100px;
 }
 .headphones {
   background: url("./assets/headphones.png") no-repeat;
@@ -888,8 +895,7 @@ body {
 .testimonial-card .card-text {
   font-style: normal;
   font-weight: 300;
-  font-size: 24px;
-  line-height: 161%;
+  font-size: 1.5rem;
 }
 .testimonial-img {
   margin-bottom: -10%;
